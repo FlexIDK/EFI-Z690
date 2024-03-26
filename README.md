@@ -45,9 +45,9 @@ Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.
 
 **Cinebench 2024**
 
-![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/main/_/cinebench_mc.jpg)
+![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/master/_/cinebench_mc.jpg)
 
-![RX 6700 XT](https://github.com/FlexIDK/EFI-Z690/blob/main/_/cinebench_rx6700.jpg)
+![RX 6700 XT](https://github.com/FlexIDK/EFI-Z690/blob/master/_/cinebench_rx6700.jpg)
 
 ## Kexts
 
