@@ -8,7 +8,7 @@
 - **GPU**: AMD Radeon RX 6700 XT
 - **Storage**: Samsung EVO 970 256gb NVMe
 - **OS**: macOS Monterey 12.7.4
-- **OpenCore**: 0.9.9
+- **OpenCore**: 1.0.0
 - **WiFi**: Intel AX210 _(default on the motherboard)_
 - **Bluetooth**: Intel AX210 _(default on the motherboard)_
 - **Ethernet**: Realtek® 8125BG 2.5Gbps LAN controller _(default on the motherboard)_
@@ -43,6 +43,8 @@ Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.
 
 **Geekbench 5:** 2933 / 18715 [Results](https://browser.geekbench.com/v6/cpu/5473034)
 
+**Cinebench R23** * / 30500
+
 **Cinebench 2024**
 
 ![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/master/_/cinebench_mc.jpg)
@@ -60,10 +62,8 @@ Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.
 - Intel AX210 Bluetooth:
   - [IntelBTPatcher.kext](EFI%2FOC%2FKexts%2FIntelBTPatcher.kext)
   - [IntelBluetoothFirmware.kext](EFI%2FOC%2FKexts%2FIntelBluetoothFirmware.kext)
-  - [IntelBluetoothInjector.kext](EFI%2FOC%2FKexts%2FIntelBluetoothInjector.kext) need add and enable if macOS Big Sur or lower
   - [BlueToolFixup.kext](EFI%2FOC%2FKexts%2FBlueToolFixup.kext)
 - RX 6700 XT:
   - [NootRX.kext](EFI%2FOC%2FKexts%2FNootRX.kext)
 - CPU:
   - [CpuTopologyRebuild.kext](EFI%2FOC%2FKexts%2FCpuTopologyRebuild.kext)
-  - [CPUFriend.kext](EFI%2FOC%2FKexts%2FCPUFriend.kext)
