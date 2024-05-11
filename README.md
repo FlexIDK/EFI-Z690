@@ -2,17 +2,29 @@
 
 ## Hardware
 
+- **OpenCore**: 1.0.0
 - **Motherboard**: MSI MAG Z690M MORTAR WIFI
 - **CPU**: Intel Core i7-13700K
 - **RAM**: 64GB DDR5 6000MHz (4 x 16GB)
 - **GPU**: AMD Radeon RX 6700 XT
 - **Storage**: Samsung EVO 970 256gb NVMe
 - **OS**: macOS Monterey 12.7.4
-- **OpenCore**: 1.0.0
 - **WiFi**: Intel AX210 _(default on the motherboard)_
 - **Bluetooth**: Intel AX210 _(default on the motherboard)_
 - **Ethernet**: Realtek® 8125BG 2.5Gbps LAN controller _(default on the motherboard)_
 - **Audio**: Realtek® ALC1200 Codec _(default on the motherboard)_
+
+## Working
+
+- CPU 8 core + 24 threads
+- GPU 6700 XT (HDMI/DP)
+- RAM 6000MHz (4 sticks)
+- Audio (from MB)
+- Ethernet (from MB)
+- WiFi (Intel AX210) (from MB)
+- Bluetooth (Intel AX210) (from MB) + BT mac keyboard/mouse
+- Sleep and wakeup
+- All USB ports (from MB)
 
 ## Config
 
@@ -25,7 +37,7 @@
   - WhateverGreen.kext for [default AMD GPU](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html)
     - Need add boot options: agdpmod=pikera (for AMD dGPU)
 
-Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.
+_**Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.**_
 
 ## BIOS
 
@@ -34,16 +46,17 @@ Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.
 - Boot > Secure Boot = off
 - Disable iGPU
 - SATA Mode = AHCI
-- Hyper Threading - Enabled
-- All P-Cores and E-Cores - Enabled
-- Above 4G decoding - on
-- XHCI Hand-off - on
+- Hyper Threading = Enabled
+- All P-Cores and E-Cores = Enabled
+- Above 4G decoding = on
+- XHCI Hand-off = on
+- Resize BAR = on
 
 ## Performance
 
-**Geekbench 5:** 2933 / 18715 [Results](https://browser.geekbench.com/v6/cpu/5473034)
+**Geekbench 5**: 2933 / 18715 [Results](https://browser.geekbench.com/v6/cpu/5473034)
 
-**Cinebench R23** * / 30500
+**Cinebench R23**: * / 30500
 
 **Cinebench 2024**
 
@@ -67,3 +80,8 @@ Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.
   - [NootRX.kext](EFI%2FOC%2FKexts%2FNootRX.kext)
 - CPU:
   - [CpuTopologyRebuild.kext](EFI%2FOC%2FKexts%2FCpuTopologyRebuild.kext)
+- USB
+  - [USBToolBox.kext](EFI%2FOC%2FKexts%2FUSBToolBox.kext)
+  - [UTBDefault.kext](EFI%2FOC%2FKexts%2FUTBDefault.kext)
+  - [USBWakeFixup.kext](EFI%2FOC%2FKexts%2FUSBWakeFixup.kext)
+
