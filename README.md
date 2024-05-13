@@ -1,4 +1,4 @@
-# MAG Z690M MORTAR WIFI + i7-13700K + DDR5 + RX 6700 XT
+# MAG Z690M MORTAR WIFI + i7-13700K + DDR5 + RX 6700 XT + Intel AX211
 
 ## Hardware
 
@@ -9,8 +9,8 @@
 - **GPU**: AMD Radeon RX 6700 XT
 - **Storage**: Samsung EVO 970 256gb NVMe
 - **OS**: macOS Monterey 12.7.4
-- **WiFi**: Intel AX210 _(default on the motherboard)_
-- **Bluetooth**: Intel AX210 _(default on the motherboard)_
+- **WiFi**: Intel AX211 _(default on the motherboard)_
+- **Bluetooth**: Intel AX211 _(default on the motherboard)_
 - **Ethernet**: Realtek® 8125BG 2.5Gbps LAN controller _(default on the motherboard)_
 - **Audio**: Realtek® ALC1200 Codec _(default on the motherboard)_
 
@@ -21,8 +21,8 @@
 - RAM 6000MHz (4 sticks)
 - Audio (from MB)
 - Ethernet (from MB)
-- WiFi (Intel AX210) (from MB)
-- Bluetooth (Intel AX210) (from MB) + BT mac keyboard/mouse
+- WiFi (Intel AX211) (from MB)
+- Bluetooth (Intel AX211) (from MB) + BT mac keyboard/mouse
 - Sleep and wakeup
 - All USB ports (from MB)
 
@@ -54,9 +54,21 @@ _**Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.**_
 
 ## Performance
 
-**Geekbench 5**: 2933 / 18715 [Results](https://browser.geekbench.com/v6/cpu/5473034)
+**Geekbench 5**: 2984 / 18965
+
+![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/master/_/gb_cpu.png)
+
+![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/master/_/gb_opencl.png)
+
+![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/master/_/gb_metal.png)
+
+Results: [CPU](https://browser.geekbench.com/v6/cpu/6048962), 
+[Metal](https://browser.geekbench.com/v6/compute/2166660), 
+[OpenCL](https://browser.geekbench.com/v6/compute/2166666)
 
 **Cinebench R23**: * / 30500
+
+![Multi-Core](https://github.com/FlexIDK/EFI-Z690/blob/master/_/cb_r23_m.png)
 
 **Cinebench 2024**
 
@@ -70,9 +82,9 @@ _**Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.**_
   - [AppleALC.kext](EFI%2FOC%2FKexts%2FAppleALC.kext)
 - Ethernet:
   - [LucyRTL8125Ethernet.kext](EFI%2FOC%2FKexts%2FLucyRTL8125Ethernet.kext)
-- Intel AX210 Wifi:
+- Intel AX211 Wifi:
   - [AirportItlwm.kext](EFI%2FOC%2FKexts%2FAirportItlwm.kext)
-- Intel AX210 Bluetooth:
+- Intel AX211 Bluetooth:
   - [IntelBTPatcher.kext](EFI%2FOC%2FKexts%2FIntelBTPatcher.kext)
   - [IntelBluetoothFirmware.kext](EFI%2FOC%2FKexts%2FIntelBluetoothFirmware.kext)
   - [BlueToolFixup.kext](EFI%2FOC%2FKexts%2FBlueToolFixup.kext)
