@@ -8,11 +8,17 @@
 - **RAM**: 64GB DDR5 6000MHz (4 x 16GB)
 - **GPU**: AMD Radeon RX 6700 XT
 - **Storage**: Samsung EVO 970 256gb NVMe
-- **OS**: macOS Monterey 12.7.4
+- **OS**: macOS Ventura 13.6.7
 - **WiFi**: Intel AX211 _(default on the motherboard)_
 - **Bluetooth**: Intel AX211 _(default on the motherboard)_
 - **Ethernet**: Realtek® 8125BG 2.5Gbps LAN controller _(default on the motherboard)_
 - **Audio**: Realtek® ALC1200 Codec _(default on the motherboard)_
+
+## Tested
+
+- macOS Monterey 12.7.4 / 12.7.5
+- update Monterey from 12.7.4 to 12.7.5
+- update from Monterey to Ventura 13.6.7
 
 ## Working
 
@@ -24,7 +30,7 @@
 - WiFi (Intel AX211) (from MB)
 - Bluetooth (Intel AX211) (from MB) + BT mac keyboard/mouse
 - Sleep and wakeup
-- All USB ports (from MB)
+- All USB ports (from MB) - USB2.x/3.x
 
 ## Config
 
@@ -44,7 +50,7 @@ _**Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.**_
 - Boot > Fast Boot = off
 - Boot > Boot Mode Select = UEFI
 - Boot > Secure Boot = off
-- Disable iGPU
+- Disable iGPU (can be left enable)
 - SATA Mode = AHCI
 - Hyper Threading = Enabled
 - All P-Cores and E-Cores = Enabled
@@ -83,17 +89,24 @@ Results: [CPU](https://browser.geekbench.com/v6/cpu/6048962),
 - Ethernet:
   - [LucyRTL8125Ethernet.kext](EFI%2FOC%2FKexts%2FLucyRTL8125Ethernet.kext)
 - Intel AX211 Wifi:
-  - [AirportItlwm.kext](EFI%2FOC%2FKexts%2FAirportItlwm.kext)
+  - [AirportItlwm_Monterey.kext](EFI%2FOC%2FKexts%2FAirportItlwm_Monterey.kext) - only for Monterey (disabled)
+  - [AirportItlwm_Ventura.kext](EFI%2FOC%2FKexts%2FAirportItlwm_Ventura.kext) - only for Ventura (enabled)
 - Intel AX211 Bluetooth:
   - [IntelBTPatcher.kext](EFI%2FOC%2FKexts%2FIntelBTPatcher.kext)
   - [IntelBluetoothFirmware.kext](EFI%2FOC%2FKexts%2FIntelBluetoothFirmware.kext)
   - [BlueToolFixup.kext](EFI%2FOC%2FKexts%2FBlueToolFixup.kext)
 - RX 6700 XT:
-  - [NootRX.kext](EFI%2FOC%2FKexts%2FNootRX.kext)
+  - [NootRX.kext](EFI%2FOC%2FKexts%2FNootRX.kext) - for unsupported AMD rDNA 2 dGPU (enabled)
+- GPU/iGPU
+  - [WhateverGreen.kext](EFI%2FOC%2FKexts%2FWhateverGreen.kext) - for other GPU/iGPU (disabled)
 - CPU:
   - [CpuTopologyRebuild.kext](EFI%2FOC%2FKexts%2FCpuTopologyRebuild.kext)
-- USB
+- USB (deprecate) (disabled)
   - [USBToolBox.kext](EFI%2FOC%2FKexts%2FUSBToolBox.kext)
   - [UTBDefault.kext](EFI%2FOC%2FKexts%2FUTBDefault.kext)
   - [USBWakeFixup.kext](EFI%2FOC%2FKexts%2FUSBWakeFixup.kext)
-
+- USB 2/3 (correct mapped port)
+  - [USBMap.kext](EFI%2FOC%2FKexts%2FUSBMap.kext) **(enable)**
+  - [USBMapDummy.kext](EFI%2FOC%2FKexts%2FUSBMapDummy.kext) - for debug (disabled)
+  - [USBMapLegacy.kext](EFI%2FOC%2FKexts%2FUSBMapLegacy.kext) - legacy (disabled)
+  - [USBMapLegacyDummy.kext](EFI%2FOC%2FKexts%2FUSBMapLegacyDummy.kext) - legacy for debug (disabled)
