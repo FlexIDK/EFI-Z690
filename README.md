@@ -50,7 +50,7 @@ _**Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.**_
 - Boot > Fast Boot = off
 - Boot > Boot Mode Select = UEFI
 - Boot > Secure Boot = off
-- Disable iGPU (can be left enable)
+- Disable iGPU (can be left enable) (UHD 770 does not work in MacOS)
 - SATA Mode = AHCI
 - Hyper Threading = Enabled
 - All P-Cores and E-Cores = Enabled
@@ -97,6 +97,7 @@ Results: [CPU](https://browser.geekbench.com/v6/cpu/6048962),
   - [BlueToolFixup.kext](EFI%2FOC%2FKexts%2FBlueToolFixup.kext)
 - RX 6700 XT:
   - [NootRX.kext](EFI%2FOC%2FKexts%2FNootRX.kext) - for unsupported AMD rDNA 2 dGPU (enabled)
+  - [SMCRadeonSensors.kext](EFI%2FOC%2FKexts%2FSMCRadeonSensors.kext) - VirtualSMC plug-in that provides temperature readings for AMD GPUs (6xxx series) (enabled)
 - GPU/iGPU
   - [WhateverGreen.kext](EFI%2FOC%2FKexts%2FWhateverGreen.kext) - for other GPU/iGPU (disabled)
 - CPU:
