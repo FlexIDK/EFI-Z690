@@ -8,7 +8,7 @@
 - **RAM**: 64GB DDR5 6000MHz (4 x 16GB)
 - **GPU**: AMD Radeon RX 6700 XT
 - **Storage**: Samsung EVO 970 256gb NVMe
-- **OS**: macOS Ventura 13.6.7
+- **OS**: macOS Ventura 13.6.9
 - **WiFi**: Intel AX211 _(default on the motherboard)_
 - **Bluetooth**: Intel AX211 _(default on the motherboard)_
 - **Ethernet**: Realtek® 8125BG 2.5Gbps LAN controller _(default on the motherboard)_
@@ -19,6 +19,8 @@
 - macOS Monterey 12.7.4 / 12.7.5
 - update Monterey from 12.7.4 to 12.7.5
 - update from Monterey to Ventura 13.6.7
+- update from Ventura 13.6.7 to Ventura 13.6.8
+- update from Ventura 13.6.8 to Ventura 13.6.9
 
 ## Working
 
@@ -108,6 +110,6 @@ Results: [CPU](https://browser.geekbench.com/v6/cpu/6048962),
   - [USBWakeFixup.kext](EFI%2FOC%2FKexts%2FUSBWakeFixup.kext)
 - USB 2/3 (correct mapped port)
   - [USBMap.kext](EFI%2FOC%2FKexts%2FUSBMap.kext) **(enable)**
-  - [USBMapDummy.kext](EFI%2FOC%2FKexts%2FUSBMapDummy.kext) - for debug (disabled)
   - [USBMapLegacy.kext](EFI%2FOC%2FKexts%2FUSBMapLegacy.kext) - legacy (disabled)
+  - [USBMapDummy.kext](EFI%2FOC%2FKexts%2FUSBMapDummy.kext) - for debug (disabled)
   - [USBMapLegacyDummy.kext](EFI%2FOC%2FKexts%2FUSBMapLegacyDummy.kext) - legacy for debug (disabled)
