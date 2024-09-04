@@ -2,7 +2,7 @@
 
 ## Hardware
 
-- **OpenCore**: 1.0.0
+- **OpenCore**: 1.0.1
 - **Motherboard**: MSI MAG Z690M MORTAR WIFI
 - **CPU**: Intel Core i7-13700K
 - **RAM**: 64GB DDR5 6000MHz (4 x 16GB)
@@ -50,7 +50,7 @@ _**Need add MLB, SystemSerialNumber and SystemUUID in PlatformInfo section.**_
 - Boot > Fast Boot = off
 - Boot > Boot Mode Select = UEFI
 - Boot > Secure Boot = off
-- Disable iGPU (can be left enable) (UHD 770 does not work in MacOS)
+- Disable iGPU (can be left enable) (UHD 770 / Arc / Xe does not work in MacOS)
 - SATA Mode = AHCI
 - Hyper Threading = Enabled
 - All P-Cores and E-Cores = Enabled
