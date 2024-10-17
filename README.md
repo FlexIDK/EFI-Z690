@@ -2,13 +2,13 @@
 
 ## Hardware
 
-- **OpenCore**: 1.0.1
+- **OpenCore**: 1.0.2
 - **Motherboard**: MSI MAG Z690M MORTAR WIFI
 - **CPU**: Intel Core i7-13700K
 - **RAM**: 64GB DDR5 6000MHz (4 x 16GB)
 - **GPU**: AMD Radeon RX 6700 XT
 - **Storage**: Samsung EVO 970 256gb NVMe
-- **OS**: macOS Ventura 13.6.9
+- **OS**: macOS Ventura 13.7
 - **WiFi**: Intel AX211 _(default on the motherboard)_
 - **Bluetooth**: Intel AX211 _(default on the motherboard)_
 - **Ethernet**: Realtek® 8125BG 2.5Gbps LAN controller _(default on the motherboard)_
@@ -21,6 +21,7 @@
 - update from Monterey to Ventura 13.6.7
 - update from Ventura 13.6.7 to Ventura 13.6.8
 - update from Ventura 13.6.8 to Ventura 13.6.9
+- update from Ventura 13.6.9 to Ventura 13.7
 
 ## Working
 
