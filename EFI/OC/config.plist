@@ -215,6 +215,8 @@
 			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
+			<key>ClearTaskSwitchBit</key>
+			<false/>
 			<key>DevirtualiseMmio</key>
 			<true/>
 			<key>DisableSingleUser</key>
@@ -1358,6 +1360,8 @@
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
+		<array/>
+		<key>Unload</key>
 		<array/>
 	</dict>
 </dict>
